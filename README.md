@@ -1,0 +1,23 @@
+# Dwelling Energy Insights
+
+
+**DataCamp course**
+...
+
+**Reflection and evaluation**
+...
+
+Research project
+...
+
+Predictive Analytics
+...
+
+Domain knowledge
+...
+
+Data preprocessing
+...
+
+Communication
+...
