@@ -11,7 +11,7 @@
 
 
 ____
-* Research project
+**Research project**
 1. Task definition
 2. Evaluation
 3. Conclusions
@@ -19,7 +19,7 @@ ____
 
 
 ____
-* Predictive Analytics
+**Predictive Analytics**
 1. Selecting a Model
 2. Configuring a Model
 3. Training a model
@@ -28,14 +28,14 @@ ____
 
 
 ____
-* Domain knowledge
+**Domain knowledge**
 1. Introduction of the subject field
 2. Literature research
 3. Explanation of Terminology, jargon and definitions
 
 
 ____
-* Data preprocessing
+**Data preprocessing**
 1. Data exploration
 2. Data cleaning
 3. Data preparation
@@ -44,6 +44,6 @@ ____
 
 
 ____
-* Communication
+**Communication**
 1. Presentations 
 2. Writing paper
