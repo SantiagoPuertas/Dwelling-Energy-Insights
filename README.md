@@ -11,31 +11,31 @@ Evaluation on the group project as a whole.
 
 
 ____
-**Research project**
+* Research project
 Task definition
 Evaluation
 Conclusions
 Planning
 
-**Predictive Analytics**
+* Predictive Analytics
 Selecting a Model
 Configuring a Model
 Training a model
 Evaluating a model
 Visualizing the outcome of a model (explanatory)
 
-**Domain knowledge**
+* Domain knowledge
 Introduction of the subject field
 Literature research
 Explanation of Terminology, jargon and definitions
 
-**Data preprocessing**
+* Data preprocessing
 Data exploration
 Data cleaning
 Data preparation
 Data explanation
 Data visualization (exploratory)
 
-**Communication**
+* Communication
 Presentations 
 Writing paper
