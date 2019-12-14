@@ -21,6 +21,12 @@ ____
 ____
 **Predictive Analytics**
 1. Selecting a Model
+  - [Predicting Heatin System](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb):
+  
+  - [Predicting number of people](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20People%20v2.ipynb):
+  
+  - [Predicting number of solar panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Solar%20panelsV2.ipynb):
+  
 2. Configuring a Model
 3. Training a model
 4. Evaluating a model
