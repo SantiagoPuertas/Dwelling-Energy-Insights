@@ -12,30 +12,30 @@ Evaluation on the group project as a whole.
 
 ____
 * Research project
-Task definition
-Evaluation
-Conclusions
-Planning
+1. Task definition
+2. Evaluation
+3. Conclusions
+4. Planning
 
 * Predictive Analytics
-Selecting a Model
-Configuring a Model
-Training a model
-Evaluating a model
-Visualizing the outcome of a model (explanatory)
+1. Selecting a Model
+2. Configuring a Model
+3. Training a model
+4. Evaluating a model
+5. Visualizing the outcome of a model (explanatory)
 
 * Domain knowledge
-Introduction of the subject field
-Literature research
-Explanation of Terminology, jargon and definitions
+1. Introduction of the subject field
+2. Literature research
+3. Explanation of Terminology, jargon and definitions
 
 * Data preprocessing
-Data exploration
-Data cleaning
-Data preparation
-Data explanation
-Data visualization (exploratory)
+1. Data exploration
+2. Data cleaning
+3. Data preparation
+4. Data explanation
+5. Data visualization (exploratory)
 
 * Communication
-Presentations 
-Writing paper
+1. Presentations 
+2. Writing paper
