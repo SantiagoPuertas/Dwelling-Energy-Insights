@@ -2,12 +2,12 @@
 
 
 **DataCamp course**
-DataCamp Course completion. 
+1. DataCamp Course completion. 
 
 **Reflection and evaluation**
-Reflection on own contribution to the project.
-Reflection on own learning objectives.
-Evaluation on the group project as a whole.
+1. Reflection on own contribution to the project.
+2. Reflection on own learning objectives.
+3. Evaluation on the group project as a whole.
 
 
 ____
