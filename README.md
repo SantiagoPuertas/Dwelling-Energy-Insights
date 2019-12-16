@@ -4,9 +4,9 @@
 **DataCamp course**
 1. DataCamp Course completion. 
 	* I have completed a total of 7 datacamp courses that have helped me to better understand data preprocessing, dataframe 	processing and data visualization
-	![Image of Yaktocat](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp1.png)
-	![Image of Yaktocat](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp2.png)
-	![Image of Yaktocat](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp3.png)
+	![Image of datacamp1](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp1.png)
+	![Image of datacamp2](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp2.png)
+	![Image of datacamp3](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/datacamp3.png)
 
 **Reflection and evaluation**
 1. Reflection on own contribution to the project.
@@ -80,10 +80,10 @@ ____
 
 5. Visualizing the outcome of a model (explanatory)
 	* Barplot comparing each model with each other
-	![Image of Yaktocat](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/results1.png)
+	![Image of results1](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/results1.png)
 	
 	* Precision comparison
-	![Image of Yaktocat](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/results2.png)
+	![Image of results2](https://raw.githubusercontent.com/SantiagoPuertas/Dwelling-Energy-Insights/master/Images/results2.png)
 
 
 ____
