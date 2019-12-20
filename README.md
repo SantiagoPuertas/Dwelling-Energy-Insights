@@ -91,10 +91,14 @@ ____
 The model selected for this project has finally been LSTM. It is the model with which we have achieved better results.
 
 The architecture we have used has been:
--a recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
--a simple 20-node MLP layer with RELU activation
--a dropout of 0.25
--finally another simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
+
+	* Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
+	
+	* Simple 20-node MLP layer with RELU activation
+	
+	* Dropout of 0.25
+	
+	* Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
 
 INSERT ARCHITECTURE IMAGE
 
