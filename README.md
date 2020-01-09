@@ -203,11 +203,19 @@ The architecture we have used has been:
 	
 	* Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
 
-INSERT ARCHITECTURE IMAGE
 
-The output of the neural network is 3 neurons for the following reason. We have converted each possible category into an array of 3 elements ([1,0,0], [0,1,0], [0,0,1])
 
-In case of having 4 categories we would have an output of 4 nodes ([1,0,0,0], [0,1,0,0], [0,0,1,0], [0,0,0,1]), in this way each final node has to be activated or not, depending on the category to be found. This has been done in this way because we found better results in this way than simply adding a final node that has to differentiate between the 3 or 4 possible classes.
+![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
+
+![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
+
+![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
+
+
+
+The output of the neural network is 3 or 4 nodes for the following reason. We have converted each possible class into an array of 3 elements ([1,0,0], [0,1,0], [0,0,1]) or 4 elemens ([1,0,0,0], [0,1,0,0], [0,0,1,0], [0,0,0,1])
+
+By this way each final node has to be activated or not, depending on the category to be found. This has been done in this way because we found better results in this way than simply adding a final node that has to differentiate between the 3 or 4 possible classes.
 
 The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
 delivery
