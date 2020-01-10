@@ -58,7 +58,7 @@
 
 * [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb)
 
-	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the final script has been reached with which we have reached an accuracy of 96%
+	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the [final script](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb) has been reached with which we have reached an accuracy of 96%
 
 
 
@@ -66,13 +66,17 @@
 
 2. Reflection on own learning objectives.
 
-
+	I have greatly improved my knowledge of machine learning algorithms, as well as Deep learning. I already had a knowledge base about machine learning, but recurrent neural networks have been a challenge for me. The way to train them, as well as to feed them (3D data shape) has been quite complicated, but I have learned how they work and how this type of neural networks behaves. As well as improve my knowledge about self-organizing maps (Kohonen Map) and take a lot of ease with handling large amounts of data, for cleaning and processing.
+	
+	
 
 
 
 3. Evaluation on the group project as a whole.
-
-
+	
+	On the other hand, having worked with the Scrum methodology we have been able to follow the project day by day. The daily standup has been a task that we have done methodologically every day. At the beginning it could have been a useless task, but over time and as we have been closing sprints with the objectives met, it has become a main task for the correct development of the project.
+	
+	Having worked on a real project with meetings with a product owner has given us a much more real vision of it. It has not been a mere job for the university. We had deadlines to meet, as well as expectations of the neighbors of the neighborhood where the information (Smart meters) and the product owner have been collected.
 
 
 
@@ -191,8 +195,17 @@ The data of the smart meters consists of the delivery, all the power that is not
 	* Sprint 7: 
 	
 		* 09/12/2019 - 20/12/2019
+			* Visual comparison between the different algorithms used
+			* Prepare the closed presentation of 09-12
+			* Prepare the closed presentation of 16-12
+			
+	* Sprint 8:
 	
-			* Sprint 7 progress here
+		* 06/01/20 - 17/01/20
+			* Prepare the final open presentation of 10-01
+			* Continue writing the chapter: 'Techniques - Methods' on the research paper
+			* Finish the research paper
+			
 	
 
 ____
