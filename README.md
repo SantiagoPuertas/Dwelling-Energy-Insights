@@ -1,6 +1,9 @@
 # Portfolio Santiago Puertas Puchol
 # Dwelling Energy Insights
 
+**Introduction**
+
+
 
 **DataCamp course**
 1. DataCamp Course completion. 
@@ -279,9 +282,9 @@ The architecture we have used has been:
 
 ![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
 
-![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
+![Image of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
 
-![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
+![Image of SolarPanels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
 
 
 
@@ -290,20 +293,29 @@ The output of the neural network is 3 or 4 nodes for the following reason. We ha
 By this way each final node has to be activated or not, depending on the category to be found. This has been done in this way because we found better results in this way than simply adding a final node that has to differentiate between the 3 or 4 possible classes.
 
 The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
-delivery
-consumption
-T
-SQ
-Q
-week
-month
-season
-day
-hour
+
+delivery: delivery energy to the net in Kw/h
+consumption: energy usage from the net in Kw/h
+T: Temperature (in 0.1 degrees Celsius) at 1.50 m height during the observation;
+SQ: Duration of sunshine (in 0.1 hours) per hour, calculated from global radiation (-1 for <0.05 hours);
+Q: Global radiation (in J / cm2) per hour section;
+week: Dummy varibale of the week of the year (1-52)
+month: Dummy varibale of the month of the year (1-12)
+season: Dummy varibale of the season of the year (1-4)
+day: Dummy varibale of the day of the month (1-31)
+hour: Dummy varibale of the hour of the day (0-23)
 
 The training has been carried out with 60 epochs and a learning rate of 0.003.
 
-INSERT HISTORY GRAPH MODEL
+
+
+
+____
+
+**Final Results Comparison**
+
+
+![Image of ResultsTable](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/TotalResults.png)
 
 
 
@@ -359,9 +371,13 @@ Once we cleaned it, we added the weather data to the dataset, which comes from t
 
 
 1. Data exploration
+
 2. Data cleaning
+
 3. Data preparation
+
 4. Data explanation
+
 5. Data visualization (exploratory)
 
 
