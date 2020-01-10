@@ -14,15 +14,15 @@
 
 * [TSNE](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/TSNE%20Kmeans%20K-Nearest.ipynb) 
 
-I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
+	* I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
 
 
 
 * [Outliers by maximuns](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Cleaning%20data/outliers%20by%20maximuns.ipynb)
 
-On the other hand, I have also done cleaning scripts to be able to have a list of outliers in order to have a list of ouliers and thus be able to analyze them in order to better understand the dataset. 
+	* On the other hand, I have also done cleaning scripts to be able to have a list of outliers in order to have a list of ouliers and thus be able to analyze them in order to better understand the dataset. 
 
-Using the following formula: max_production = (75 * 230) / 4000 I have been able to find outliers. 
+	* Using the following formula: max_production = (75 * 230) / 4000 I have been able to find outliers. 
 75 amps * 230 volts divided by 4 (because each row of data is every 15 minutes) and multiplied by 1000 to convert it to KW
 
 
@@ -30,35 +30,35 @@ Using the following formula: max_production = (75 * 230) / 4000 I have been able
 
 * [Maximun electricity](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/Maximun%20electricity%20current.ipynb)
 
-Maximum electricity current (amps) that enter and exit each house, as well as in total have also been carried out independently. The objective of making these graphs is to understand if the houses between them would be able to be self-sufficient by connecting with each other and thus be able to create a network between them. In this way we would achieve the almost independence of power plants, that is, when a house produces more than it consumes, instead of pouring it into the grid and losing it, being able to share that energy with other houses.
+	* Maximum electricity current (amps) that enter and exit each house, as well as in total have also been carried out independently. The objective of making these graphs is to understand if the houses between them would be able to be self-sufficient by connecting with each other and thus be able to create a network between them. In this way we would achieve the almost independence of power plants, that is, when a house produces more than it consumes, instead of pouring it into the grid and losing it, being able to share that energy with other houses.
 
 
 
 * [Visual clasification](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/DOOR'S%20Visual%20Clasification.ipynb)
 
-Visual clasification of consumption and delivery of each house.
+	* Visual clasification of consumption and delivery of each house.
 
 
 
 * [Kohonen](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonen.ipynb)
 
-Kohonen map to classify each house in an unsupervised way and to establish the first patterns between houses with the same type of heating, number of people and number of solar panels
+	* Kohonen map to classify each house in an unsupervised way and to establish the first patterns between houses with the same type of heating, number of people and number of solar panels
 
 
 * [Kohonen visualitations](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonenen%20visualitation.ipynb)
 
-Kohonen visualitations 3D map to get acces to the entire data plot
+	* Kohonen visualitations 3D map to get acces to the entire data plot
 
 
 
 * [MLP](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/MLP_FINAL.ipynb)
 
-MLP (multi layer perceptron) used in the first versions of the algorithms to try to predict the possible classes of houses (heating system, number of solar pannels, number of people)
+	* MLP (multi layer perceptron) used in the first versions of the algorithms to try to predict the possible classes of houses (heating system, number of solar pannels, number of people)
 
 
 * [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb)
 
-The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the final script has been reached with which we have reached an accuracy of 96%
+	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the final script has been reached with which we have reached an accuracy of 96%
 
 
 
