@@ -12,9 +12,56 @@
 **Reflection and evaluation**
 1. Reflection on own contribution to the project.
 
+TSNE 
+I have created the [TSN](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/TSNE%20Kmeans%20K-Nearest.ipynb) script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
+
+
+
+Outliers by maximuns
+
+On the other hand, I have also done cleaning scripts to be able to have a [list of outliers](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Cleaning%20data/outliers%20by%20maximuns.ipynb) in order to have a list of ouliers and thus be able to analyze them in order to better understand the dataset. 
+
+Using the following formula: max_production = (75 * 230) / 4000 I have been able to find outliers. 
+75 amps * 230 volts divided by 4 (because each row of data is every 15 minutes) and multiplied by 1000 to convert it to KW
+
+
+
+Maximun electricity
+[Maximum electricity current](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/Maximun%20electricity%20current.ipynb) (amps) that enter and exit each house, as well as in total have also been carried out independently. The objective of making these graphs is to understand if the houses between them would be able to be self-sufficient by connecting with each other and thus be able to create a network between them. In this way we would achieve the almost independence of power plants, that is, when a house produces more than it consumes, instead of pouring it into the grid and losing it, being able to share that energy with other houses.
+
+
+
+Doors visual clasification
+[Visual clasification](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/DOOR'S%20Visual%20Clasification.ipynb):
+
+
+Kohonen
+[Kohonen](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonen.ipynb):
+
+
+
+Kohonen visualitations
+[Kohonen visualitations](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonenen%20visualitation.ipynb):
+
+
+
+MLP
+[MLP](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/MLP_FINAL.ipynb):
+
+
+
+
+
 2. Reflection on own learning objectives.
 
+
+
+
+
 3. Evaluation on the group project as a whole.
+
+
+
 
 
 ____
@@ -275,6 +322,9 @@ Bibliography:
 
 ____
 **Data preprocessing**
+
+
+
 
 In order to explore the data, we plotted the energy delivery and energy consumption of one dwelling. From these plots we realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data. 
 
