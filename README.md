@@ -107,10 +107,10 @@ The data of the smart meters consists of the delivery, all the power that is not
 3. Conclusions
 
 	* We have tested 4 different routes in order to predict and classify the data of each house.
-	* LSTM (Long short-term memory): This type of recurrent neural network is the one that has provided the best predictions.
-	* K-NEAREST (K Nearest Neighbor)
-	* SVM (Support vector machine)
-	* LOGISTIC REGRESSION
+		* LSTM (Long short-term memory): This type of recurrent neural network is the one that has provided the best predictions.
+		* K-NEAREST (K Nearest Neighbor)
+		* SVM (Support vector machine)
+		* LOGISTIC REGRESSION
 	
 	
 	* In this part of the chapter the results of the relevant algorithms used are discussed.  
@@ -294,16 +294,16 @@ By this way each final node has to be activated or not, depending on the categor
 
 The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
 
-delivery: delivery energy to the net in Kw/h
-consumption: energy usage from the net in Kw/h
-T: Temperature (in 0.1 degrees Celsius) at 1.50 m height during the observation;
-SQ: Duration of sunshine (in 0.1 hours) per hour, calculated from global radiation (-1 for <0.05 hours);
-Q: Global radiation (in J / cm2) per hour section;
-week: Dummy varibale of the week of the year (1-52)
-month: Dummy varibale of the month of the year (1-12)
-season: Dummy varibale of the season of the year (1-4)
-day: Dummy varibale of the day of the month (1-31)
-hour: Dummy varibale of the hour of the day (0-23)
+	- delivery: delivery energy to the net in Kw/h
+	- consumption: energy usage from the net in Kw/h
+	- T: Temperature (in 0.1 degrees Celsius) at 1.50 m height during the observation;
+	- SQ: Duration of sunshine (in 0.1 hours) per hour, calculated from global radiation (-1 for <0.05 hours);
+	- Q: Global radiation (in J / cm2) per hour section;
+	- week: Dummy varibale of the week of the year (1-52)
+	- month: Dummy varibale of the month of the year (1-12)
+	- season: Dummy varibale of the season of the year (1-4)
+	- day: Dummy varibale of the day of the month (1-31)
+	- hour: Dummy varibale of the hour of the day (0-23)
 
 The training has been carried out with 60 epochs and a learning rate of 0.003.
 
@@ -361,24 +361,35 @@ ____
 **Data preprocessing**
 
 
+1. Data exploration
 
+In order to explore the data, we plotted the energy delivery and energy consumption of one dwelling. From these plots we realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data.
 
-In order to explore the data, we plotted the energy delivery and energy consumption of one dwelling. From these plots we realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data. 
+2. Data cleaning
 
 The data was cleaned by removing those dwellings which had less data than the others and those rows where there were blank spaces or outliers for any dwelling. 
+
+3. Data preparation
 
 Once we cleaned it, we added the weather data to the dataset, which comes from the KNMI (Koninklijk Nederlands Meteorologisch Instituut) and some dummy variables as well (month, season...). Eventually we placed all the houses one below each other to feed the models. 
 
 
-1. Data exploration
-
-2. Data cleaning
-
-3. Data preparation
-
 4. Data explanation
 
+![Image of Dataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/dataset.png)
+
+ID-nummer: house identifier
+Concept: type of heating system the house has (E = Electricity, WP = Heat Pump, ZON = Thermal Solar Panel)
+PV-aantal: number of solar panels installed
+Personen: people living in that house
+
+
+
 5. Data visualization (exploratory)
+
+![Image of Dataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/CleanDataset.png)
+
+
 
 
 ____
@@ -390,20 +401,31 @@ Communication has been a large part of our project, greatly influencing its corr
 ![Image of comunication](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/comunication.png)
 
 
-We decided to make this file to make an equitable distribution of the presentation tasks. The type of presentations we have made have been of 4 types: closed, open, external, and lectures. The closed presentations consist of a summary of the progress made in the last week sprint. We have two closed presentations for each sprint, these presentations are more technical than others,so we are being able to explain precisely the methods we have been using, we can explain more information about neural networks, preprocessing or data normalization.  
+We decided to make this file to make an equitable distribution of the presentation tasks. The type of presentations we have made have been of 4 types: closed, open, external, and lectures. 
 
-Open presentations have a similar point of view, but they have the particularity that they should not be made so technically. This is because these presentations are focussed to show the progress avhieve so far of the project to the entire university community, so anyone who is interested can came to them. On the other hand, we have the presentations of specific models such as TSNE by our group, Markov models by Saab group or genetic algorithms by Danone group. This last type of presentations helps us to have a broader view of the work that our colleagues do and thus be able to help each other as well. 
+The **closed presentations** consist of a summary of the progress made in the last week sprint. We have two closed presentations for each sprint, these presentations are more technical than others,so we are being able to explain precisely the methods we have been using, we can explain more information about neural networks, preprocessing or data normalization.  
 
-We have also made presentations in external locations; they have been in Groene mient and TU Delft. The presentation of Groene mient has been carried out to present the progress of the project to the community of neighbours where the data we are using in our project have been collected. In this presentation the neighbours taught us the distribution of the houses as well as the solar panels position to have more knowledge about the data we are using and thus use them with a better perspective. 
+**Open presentations** have a similar point of view, but they have the particularity that they should not be made so technically. This is because these presentations are focussed to show the progress avhieve so far of the project to the entire university community, so anyone who is interested can came to them. On the other hand, we have the presentations of specific models such as TSNE by our group, Markov models by Saab group or genetic algorithms by Danone group. This last type of presentations helps us to have a broader view of the work that our colleagues do and thus be able to help each other as well. 
+
+We have also made **presentations in external locations**; they have been in Groene mient and TU Delft. The presentation of Groene mient has been carried out to present the progress of the project to the community of neighbours where the data we are using in our project have been collected. In this presentation the neighbours taught us the distribution of the houses as well as the solar panels position to have more knowledge about the data we are using and thus use them with a better perspective. 
 
 The presentation of TU Delf has not been as technical as one would expect, because there were attendees of all levels, this is why some questions from the attendees were intended to better understand the scope of the project and others more focused on how the algorithms that we are using works. 
 
-Finally, every week we have had an average of 2 meetings per week with the product owner (Monday and Friday) to keep a close eye on the project. This has allowed us to move along the recommended line by him and thus be able to move faster in the development of algorithms and not get lost in other methods that are not useful for the project. 
+Finally, every week we have had an average of **2 meetings per week with the product owner** (Monday and Friday) to keep a close eye on the project. This has allowed us to move along the recommended line by him and thus be able to move faster in the development of algorithms and not get lost in other methods that are not useful for the project. 
 
 For the correct management of individual or group tasks we have used the Trello as a scrum website tool, which has allowed us to have an accurate record of the tasks to be performed in each sprint. 
 
 
 1. Presentations 
+
+	* Closed: Weekly presentations in which only the students of the minor and teachers participate to show the progress made in that week. They have a more technical format than other presentations.
+	* Open: Weekly presentations in which anyone who is interested in going can participate, to show them progress made in that week. They have a less technical format and are based more on trying to show people who do not know so much about the field that they know and understand as much as possible.
+	* TSNE: Presentation made to explain TSNE. Each group has the possibility of presenting an algorithm or technique that they have used in their project to show it to classmates.
+	* Groene mient: Presentation made in the neighborhood where the information of the Smart meters has been extracted. The objective of this presentation is to show the neighbors the progress we were taking so far and what kind of information, as well as patterns we have taken out after performing the data processing.
+	* TU Delft: Presentation made at the University of TU Delft to show the project as well as its progress.
+	
+
+
 2. Writing paper
 
 
