@@ -270,13 +270,13 @@ The model selected for this project has finally been LSTM. It is the model with 
 
 The architecture we have used has been:
 
-	* Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
+	- Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
 	
-	* Simple 20-node MLP layer with RELU activation
+	- Simple 20-node MLP layer with RELU activation
 	
-	* Dropout of 0.25
+	- Dropout of 0.25
 	
-	* Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
+	- Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
 
 
 
@@ -337,10 +337,10 @@ ____
  
 We have found several papers that were on the topic of energy usage in dwellings, such as: 
 
-	Energy-efficient houses built according to the energy performance requirements introduced in Denmark in 2006 [1] 
-	Household electricity consumption and CO2 emissions in the Netherlands: A model-based analysis [2] 
-	Embodied CO2 Emissions in Building Construction Materials of Hellenic Dwellings [3] 
-	Theoretical vs. actual energy consumption of labelled dwellings in the Netherlands: Discrepancies and policy implications [4] 
+	- Energy-efficient houses built according to the energy performance requirements introduced in Denmark in 2006
+	- Household electricity consumption and CO2 emissions in the Netherlands: A model-based analysis
+	- Embodied CO2 Emissions in Building Construction Materials of Hellenic Dwellings
+	- Theoretical vs. actual energy consumption of labelled dwellings in the Netherlands: Discrepancies and policy implications
  
 
 Next to that, we have also found a paper on smart meters (Smart metering in the Netherlands: What, how, and why [5]). This paper helped us to get more understanding about smart meters.  
@@ -348,11 +348,11 @@ Next to that, we have also found a paper on smart meters (Smart metering in the 
 
 Bibliography: 
 
-	H. Tommerup, J. Rose, S. Svendsen, Energy-efficient houses built according to the energy performance requirements introduced in Denmark in 2006, (2006) 
-	George Papachristos, Household electricity consumption and CO2 emissions in the Netherlands: A model-based analysis, (2014) 
-	Georgios Syngrosa, Constantinos A. Balaras, Dimitrios G. Koubogiannis, Embodied CO2 Emissions in Building Construction Materials of Hellenic Dwellings, (2017) 
-	D. Majcen, L.C.M. Itard, H. Visscher, Theoretical vs. actual energy consumption of labelled dwellings in the Netherlands: Discrepancies and policy implications, (2012) 
-	Pol Van Aubel & Erik Poll, Smart metering in the Netherlands: What, how, and why, (2019) 
+	- H. Tommerup, J. Rose, S. Svendsen, Energy-efficient houses built according to the energy performance requirements introduced in Denmark in 2006, (2006) 
+	- George Papachristos, Household electricity consumption and CO2 emissions in the Netherlands: A model-based analysis, (2014) 
+	- Georgios Syngrosa, Constantinos A. Balaras, Dimitrios G. Koubogiannis, Embodied CO2 Emissions in Building Construction Materials of Hellenic Dwellings, (2017) 
+	- D. Majcen, L.C.M. Itard, H. Visscher, Theoretical vs. actual energy consumption of labelled dwellings in the Netherlands: Discrepancies and policy implications, (2012) 
+	- Pol Van Aubel & Erik Poll, Smart metering in the Netherlands: What, how, and why, (2019) 
 
 3. Explanation of Terminology, jargon and definitions
 
@@ -373,21 +373,35 @@ The data was cleaned by removing those dwellings which had less data than the ot
 
 Once we cleaned it, we added the weather data to the dataset, which comes from the KNMI (Koninklijk Nederlands Meteorologisch Instituut) and some dummy variables as well (month, season...). Eventually we placed all the houses one below each other to feed the models. 
 
+Finally, the data has been placed in a certain way to feed our models. We have put all the data vertically, one below the other, that is, the columns of each house have all been placed in the same column in the same order that they had horizontally in the original dataset. This has allowed us to have all the dataset information in a 2-dimensional array (821100 x 10)
+
+Once we have the data in the correct way they have normalized to be able to have them all on the same scale and better train the network
+
 
 4. Data explanation
 
+Original Dataset
+
 ![Image of Dataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/dataset.png)
 
-ID-nummer: house identifier
-Concept: type of heating system the house has (E = Electricity, WP = Heat Pump, ZON = Thermal Solar Panel)
-PV-aantal: number of solar panels installed
-Personen: people living in that house
+	ID-nummer: house identifier
+	Concept: type of heating system the house has (E = Electricity, WP = Heat Pump, ZON = Thermal Solar Panel)
+	PV-aantal: number of solar panels installed
+	Personen: people living in that house
+
 
 
 
 5. Data visualization (exploratory)
 
-![Image of Dataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/CleanDataset.png)
+Cleaned dataset
+
+![Image of CleanDataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/CleanDataset.png)
+
+
+Clean normalized data set
+
+![Image of CleanDataset](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/NormalizedDataset.png)
 
 
 
