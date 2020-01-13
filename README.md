@@ -117,106 +117,32 @@ The data of the smart meters consists of the delivery, all the power that is not
 
 	* By using Logistic Regression (LG), Support Vector Machine (SVM) and K-Nearest Neighbour (K-NN) algorithms we managed to get around a 65% accuracy on predictions. So, when presenting (a part of) the dataset, the algorithms can tell us about 65% for sure which heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling. This means is it only partly possible to gain energy insights of the characteristics of the dwellings and the people using the data from smart meters. 
 
-	* We decided to use Recurrent Neural Network (RNN) algorithm to see if results are any different. Here we managed to get an accuracy of 96%. Considered that companies search for a minimum of 95% accuracy, we can now answer the research question. The answer is yes, we can. With the RNN algorithm we can find the answer to the characteristics of the dwelling like what kind of heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling. Therefore, we can gain energy insights of the characteristics of the dwellings and the people using the data from smart meters. 
+
+	* These results have been obtained for the classification of the type of heating, which have been the highest. Sorting number of people and number of solar panels in a house I have obtained an accuracy of 87.5% and 80% respectively. It is therefore expected values, since the consumption patterns of one person can be very different than those of another, however the way of heating the house (painted on a graph), as well as the energy expenditure of each heating system is particular of each type making it easier to find patterns between systems of the same type.
+	
+	* The answer is yes, we can. With the RNN algorithm we can find the answer to the characteristics of the dwelling like what kind of heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling.
+	
 
 4. Planning
 
 	* The project has been carried out using the SCRUM work methodology
 	* Trello is the web tool we have used to update all the progress as well as its planning
-	* During the project we used an agile approach using Scrum. For doing so we created an environment in Trello [1] online. Every sprint had a duration of two weeks. Every day we had a daily stand-up to discuss what is done and what will be worked on that day. At the end of every sprint a new backlog is defined and added to the list ‘To Refine’. The beginning of the next sprint a meeting decides what will be worked on during the sprint and moved to the list ‘To Do’. The tasks in the To Do list will be assigned to certain persons in the team. When working on it the task will be moved to the list ‘In Progress’ and when done to the list ‘Done’.
+	* During the project we used an agile approach using Scrum. For doing so we created an environment in Trello online. Every sprint had a duration of two weeks. Every day we had a daily stand-up to discuss what is done and what will be worked on that day. At the end of every sprint a new backlog is defined and added to the list ‘To Refine’. The beginning of the next sprint a meeting decides what will be worked on during the sprint and moved to the list ‘To Do’. The tasks in the To Do list will be assigned to certain persons in the team. When working on it the task will be moved to the list ‘In Progress’ and when done to the list ‘Done’.
 	
-	* Sprint 1: 
+![Image of trelloBoard](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/trello.png)
 	
-		* 09-09-2019 closed presentation and 16-09-2019 closed presentation. 
 
-			* Our project owner (Salcedo Rahola) introduced us to the project in more detail. He gave us some tasks to do and gave us the 	dataset of Groene Mient. The first week we mostly spend time on literature research to see if other papers could provide us with useful information, and learning Python from courses on DataCamp where access was provided by The Hague University. In week two we loaded the given dataset into the data science server of The Hague University. We started making the first visualizations that gave us insight of all the gaps and outliers in the dataset and the maximum usage and consumption per day per household 
-
-			* During the two weeks we also tackled the research question to see if the question is realistic and within our scope.
-
-	* Sprint 2:
 	
-		* 23-09-2019 and 30-09-2019 closed presentation and 27-09-2019 open presentation. 
-
-			* This sprint we searched for outliers in the dataset and tried to clean them based on the question we needed to answer at that time. For a calculation over the year every datapoint was needed, but for predictions outliers needed to be removed.   
-
-			* We calculated the maximum amount of Ampere that a household delivers and consumes on the original dataset without cleaning. 
-
-			* After discussing the research questions some more we decided to look for more data to be able to answer to questions better. We decided to look into weather data like temperature and sun hours of a weather station near Groene Mient. The variables of that dataset can be used as dummy variables during training of the Machine Learning algorithms. 
-
-			* To reach the deadlines of DataCamp we also spent time working on courses like ‘Python Data Science Toolbox’ and ‘Statistical plots with Seaborn’. 
-	
-	* Sprint 3: 
-	
-		* 07-10-2019 closed presentation and 14-10 closed presentation. 
-
-			* This sprint we focused mainly on data analysis. Therefore, we cleaned the data by removed every row of the dataset when it is missing data so that all the columns have the same length. Also, five houses have been deleted from the dataset because of the high number of rows without data. After this cleaning process, 80% of the data was preserved. We reran the Ampere calculation script and all the visualizations with the cleaned dataset. 
-
-			* From there on we started using K-Nearest Neighbours, Support Vector Machine, Logistic Regression and TSNE algorithms to classify groups of residents.  
-
-			* To see if we could improve results on those algorithms, we created dummy variables per day, per day cycle, per hour and per season.  
-
-			* Compared the Machine Learning algorithms on efficiently. 
-
-			* To reach the deadlines of DataCamp we also spent time working on courses like ‘Cleaning data with Python’ and ‘Statistical thinking in Python’.
-	
-	* Sprint 4: 
-	
-		* 01-11-2019 t-SNE presentation and open presentation and 08-11-2019 presentation at Groene Mient. 
-
-			* This sprint we also started using Kohonen map (self organizing maps) algorithm to classify groups of residents. 
-
-			* Spent some time on DataCamp to keep our knowledge updated.  
-	
-	* Sprint 5: 
-	
-		* 11-11-2019 closed presentation and 18-11-2019 closed presentation. 
-
-			* During this sprint we also mainly focused on data analytics. This time we also started using K-means, Hierarchical clustering, Density Based Scan Clustering and Gaussian Clustering algorithms to classify groups of residents. 
-
-			* Compared these unsupervised leaning algorithms with each other. 
-
-			* Implemented Logistic Regressions, K-Nearest Neighbour, Support Vector Machine and MLP algorithms with the labels from the dataset.  
-
-			* Next to this we also started working on the layout of the research paper and wrote the first chapter, the introduction. 
-	
-	* Sprint 6:
-	
-		* 29-11-2019 presentation at TU Delft and 29-11-2019 open presentation. 
-
-	 		* This sprint we applied the KNMI Dataset to the previously used algorithms with variables like temperature and solar radiation.  
-
-	 		* Started using the Recurrent Neural Network algorithm with and without the KNMI dataset.  
-
-	 		* Improved the supervised learning algorithms (LR, SVM, K-NN, RNN) with the one-against-all approach. We compared those algorithms on efficiently using first raw data, second grouped data and third with KNMI data.  
-
-	 		* At this point we decided to start preparing the new dataset with 120 dwellings to feed the existing models.  
-
-	 		* With all these algorithms used the server contained many different maps that needed a clean-up, which we did at the end of this sprint. 
-
-			* For the research paper the introduction was extended and chapter 2, Techniques – Methods, has been set up. 
-	
-	* Sprint 7: 
-	
-		* 09/12/2019 - 20/12/2019
-			* Visual comparison between the different algorithms used
-			* Prepare the closed presentation of 09-12
-			* Prepare the closed presentation of 16-12
-			
-	* Sprint 8:
-	
-		* 06/01/20 - 17/01/20
-			* Prepare the final open presentation of 10-01
-			* Continue writing the chapter: 'Techniques - Methods' on the research paper
-			* Finish the research paper
-			
 	
 
 ____
 **Predictive Analytics**
 
-After the data cleaning process, we used different Machine Learning algorithms to predict the heating system, the number of people living in the house and the number of solar panels installed. 
 
-We have used several classification models to make these predictions. We have made models based on the consumption and production data set, using a data point of every 15 minutes (one row of data). The results weren’t good, so we used different dummy variables, such as day of the week, week, season and hour. The KNMI dataset has also been implemented in the dataset, such as the temperature, global radiation and sun hours. The results improved a little bit in comparison to only using the consumption and production data. For some models, we used the summed data per day, because one row with data contains an insufficient amount of information to make a good classification.
+
+After the data cleaning process, I used different Machine Learning algorithms to predict the classes.
+
+I have used several techniques and algorithms to make these predictions and / or classifications. I have made models based on the consumption and production data set, using a data point every 15 minutes (one row of data). The results were not too good, so I used different dummy variables, such as day of the week, week, season and time. The KNMI data set has also been implemented in the data set, such as temperature, global radiation and sunshine hours. The results have improved considerably, and the one that has improved the most has been the LSTM model, because the higher the number of features, the better predictions it made.
 
 1. Selecting a Model
 	* _HS= **H**eating **S**ystem_
