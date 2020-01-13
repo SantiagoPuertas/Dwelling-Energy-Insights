@@ -39,18 +39,18 @@
 
 * [Visual clasification](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/DOOR'S%20Visual%20Clasification.ipynb)
 
-	* Visual clasification of consumption and delivery of each house.
+	* Visual clasification of consumption and delivery of each house to detect possible patterns.
 
 
 
 * [Kohonen](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonen.ipynb)
 
-	* Kohonen map to classify each house in an unsupervised way and to establish the first patterns between houses with the same type of heating, number of people and number of solar panels
+	* Kohonen map to classify each house in an unsupervised way and to establish the first patterns between houses with the same type of heating, number of people or number of solar panels
 
 
 * [Kohonen visualitations](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonenen%20visualitation.ipynb)
 
-	* Kohonen visualitations 3D map to get acces to the entire data plot
+	* 3D Kohonen visualitations to get acces to the entire data plot
 
 
 
@@ -62,8 +62,6 @@
 * [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb)
 
 	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the [final script](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb) has been reached with which we have reached an accuracy of 96%
-
-
 
 
 
@@ -106,21 +104,17 @@ The data of the smart meters consists of the delivery, all the power that is not
 
 3. Conclusions
 
-	* We have tested 4 different routes in order to predict and classify the data of each house.
-		* LSTM (Long short-term memory): This type of recurrent neural network is the one that has provided the best predictions.
-		* K-NEAREST (K Nearest Neighbor)
-		* SVM (Support vector machine)
-		* LOGISTIC REGRESSION
+	* My group has worked on other algorithms in parallel (Logistic Regression, Support Vector Machine, and K-Nearest Neighbour) while I developed the LSTM model. This model has finally become the best model to solve our research question.
 	
-	
-	* In this part of the chapter the results of the relevant algorithms used are discussed.  
 
 	* By using Logistic Regression (LG), Support Vector Machine (SVM) and K-Nearest Neighbour (K-NN) algorithms we managed to get around a 65% accuracy on predictions. So, when presenting (a part of) the dataset, the algorithms can tell us about 65% for sure which heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling. This means is it only partly possible to gain energy insights of the characteristics of the dwellings and the people using the data from smart meters. 
 
 
-	* These results have been obtained for the classification of the type of heating, which have been the highest. Sorting number of people and number of solar panels in a house I have obtained an accuracy of 87.5% and 80% respectively. It is therefore expected values, since the consumption patterns of one person can be very different than those of another, however the way of heating the house (painted on a graph), as well as the energy expenditure of each heating system is particular of each type making it easier to find patterns between systems of the same type.
+	* LSTM (Long short-term memory): This type of recurrent neural network is the one that has provided the best predictions (96% accuracy) because its training and operation is based on long time series. That is why it has been the best option, ahead of simple RNN, for the large amount of data we handled (3 years of data, stored every 15 minutes)
+
+	* These results have been obtained for the classification of the type of heating, which have been the highest. Predicting number of people and number of solar panels in a house I have obtained an accuracy of 87.5% and 80% respectively. It is therefore expected values, since the consumption patterns of one person can be very different than those of another, however the way of heating the house (painted on a graph), as well as the energy expenditure of each heating system is particular of each type making it easier to find patterns between heating systems of the same type.
 	
-	* The answer is yes, we can. With the RNN algorithm we can find the answer to the characteristics of the dwelling like what kind of heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling.
+	* The answer is yes, we can. With the RNN algorithm (LSTM) we can find the answer to the characteristics of the dwelling like what kind of heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling.
 	
 
 4. Planning
@@ -138,63 +132,66 @@ The data of the smart meters consists of the delivery, all the power that is not
 ____
 **Predictive Analytics**
 
+My teammates have made other algorithms in which very good accuracys have not been achieved, so the lstm model has finally been chosen.
 
-
-After the data cleaning process, I used different Machine Learning algorithms to predict the classes.
-
-I have used several techniques and algorithms to make these predictions and / or classifications. I have made models based on the consumption and production data set, using a data point every 15 minutes (one row of data). The results were not too good, so I used different dummy variables, such as day of the week, week, season and time. The KNMI data set has also been implemented in the data set, such as temperature, global radiation and sunshine hours. The results have improved considerably, and the one that has improved the most has been the LSTM model, because the higher the number of features, the better predictions it made.
-
-1. Selecting a Model
-	* _HS= **H**eating **S**ystem_
-	* _NP= **N**umber of **P**eople_
-	* _SP= number of **S**olar **P**anel_
-- ### LSTM
-
-	- [Predicting Heating System](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb): 95.5% accuracy result when predicting the type of heating system. 
-	- [Predicting Number of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20People%20v2.ipynb): 87.5% accuracy result when predicting the number of people living in a house. 
-  	- [Predicting Number of Solar Panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Solar%20panelsV2.ipynb): 80.5% accuracy result when predicting the number of solar panels installed in a house
-
-- ### K-NEAREST
+- K-NEAREST
 	
 	- [Predicting Heating System](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/K-Nearest%20Neighbors/K-Nearest%20Neighbors.ipynb): 64.5% accuracy result when predicting the type of heating system. 
 	- [Predicting Yes or No classification](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/K-Nearest%20Neighbors/K-Nearest%20(Focusing%20on%20one%20Type).ipynb): 
  	- [Predicting HS, NP, SP](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/K-Nearest%20Neighbors/Best%20Results.ipynb): 37.5% accuracy result when predicting the number of people living in a house.  53.5% accuracy result when predicting the number of solar panels installed in a house
- 
-
-
-- ### SVM
+	
+- SVM
 
 	- [Predicting Heating System](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/Support%20Vector%20Machine/SVM%20implementation%20for%20Type%20of%20Heating%20System%20with%20KNMI%20data%20(per%20day).ipynb): 61.5% accuracy result when predicting the type of heating system. 
 	- [Predicting Number of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/Support%20Vector%20Machine/SVM%20implementation%20for%20Number%20of%20Persons%20with%20KNMI%20data%20(per%20day).ipynb): 43.5% accuracy result when predicting the number of people living in a house. 
   	- [Predicting Number of Solar Panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/Support%20Vector%20Machine/SVM%20implementation%20for%20Number%20of%20Solar%20Panels%20with%20KNMI%20data%20(per%20day).ipynb): 38.5% accuracy result when predicting the number of solar panels installed in a house
+	
 
-
-
-- ### LOGISTIC REGRESSION
+- LOGISTIC REGRESSION
 
 	- [Predicting HS, NP, SP](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Supervised%20Machine%20Learning%20Algorithms/Logistic%20Regression/Logistic%20Regression%20Without%20data%20from%205%20houses.ipynb): 55.5% accuracy result when predicting the type of heating system. 27.5% accuracy result when predicting the number of people living in a house. 38.5% accuracy result when predicting the number of solar panels installed in a house
+ 
 
 
-2. Configuring a Model
-	* The model that has finally given the best predictions has been the LSTM, with an architecture of an input recurrent layer of 30 neurons, a dropout and a final perceptron simple layer with 3 neurons (the number of outputs neurons depends on each prediction)
 
-3. Training a model
-	* The best results have been achieved with a learning rate of 0.003 and between 50 and 60 epochs
+After the data cleaning process, I used different Machine Learning algorithms to predict and classify the classes.
 
-4. Evaluating a model
+I have made models based on the consumption and production data set, using a data point every 15 minutes (one row of data). The results were not too good, so I used different dummy variables, such as day of the week, week, season and time. The KNMI data set has also been implemented in the data set, such as temperature, global radiation and sunshine hours. The results have improved considerably, and the one that has improved the most has been the LSTM model, because the higher the number of features, the better predictions it made.
 
-5. Visualizing the outcome of a model (explanatory)
-	* Barplot comparing each model with each other
-	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
+1. Selecting a Model
+
+
+- ### [Kohonen](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonen.ipynb)
 	
-	* Precision comparison
-	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
+	* classification of the house number according to its type of heating:
+	
+	![Image of kohonen2d](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/kohonen2d.png)
+	
+		-green: Heat pump (WP)
+		-blue: Thermal solar panels (ZON)
+		-yellow: Electricity (E)
+		
+	* Three-dimensional matrix to show how many times the same pattern is repeated for different dwellings
+	
+	![Image of kohonen3d](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/kohonen3d.png)
+	
+		-the higher the bar the more activations have been had in that neuron (same pattern)
 
-____
-### LSTM
+
+Self-organizing maps have been a good classification tool for this project, but I have not been able to obtain more information about these classifications. That is why I decided to make class predictions based on the historical consumption and delivery data.
+
+- ### LSTM
+
+	- [Predicting Heating System](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb): 95.5% accuracy predicting the type of heating system. 
+	- [Predicting Number of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20People%20v2.ipynb): 87.5% accuracy predicting the number of people living in a house. 
+  	- [Predicting Number of Solar Panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Solar%20panelsV2.ipynb): 80.5% accuracy predicting the number of solar panels installed in a house
+
+
 The model selected for this project has finally been LSTM. It is the model with which we have achieved better results.
 
-The architecture we have used has been:
+The general architecture we have used has been:
+
+![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
 
 	- Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
 	
@@ -204,9 +201,8 @@ The architecture we have used has been:
 	
 	- Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
 
+For the other two previews I have made small modifications to the base architecture to improve the final result
 
-
-![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
 
 ![Image of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
 
@@ -233,6 +229,30 @@ The model has been trained with an input array of 92 elements per iteration. Thi
 
 The training has been carried out with 60 epochs and a learning rate of 0.003.
 
+
+
+
+	
+Recurrent neural networks and specifically LSTM have been the best option, since these neural networks are designed to be trained with a large amount of data based on time series, which is perfect for the purpose of our project.
+	
+
+
+2. Configuring a Model
+	* The model that has finally given the best predictions has been the LSTM, with an architecture of an input recurrent layer of 30 neurons, a dropout and a final perceptron simple layer with 3 neurons (the number of outputs neurons depends on each prediction)
+
+3. Training a model
+	* The best results have been achieved with a learning rate of 0.003 and between 50 and 60 epochs
+
+4. Evaluating a model
+
+5. Visualizing the outcome of a model (explanatory)
+	* Barplot comparing each model with each other
+	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
+	
+	* Precision comparison
+	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
+
+____
 
 
 
@@ -281,6 +301,14 @@ Bibliography:
 	- Pol Van Aubel & Erik Poll, Smart metering in the Netherlands: What, how, and why, (2019) 
 
 3. Explanation of Terminology, jargon and definitions
+
+	* _HS= **H**eating **S**ystem_
+	* _NP= **N**umber of **P**eople_
+	* _SP= number of **S**olar **P**anel_
+	* Logistic Regression (LG), Support Vector Machine (SVM) and K-Nearest Neighbour (K-NN)
+	* E = Electricity
+	* ZON = Thermal solar panels
+	* WP = Heat Pump
 
 
 ____
