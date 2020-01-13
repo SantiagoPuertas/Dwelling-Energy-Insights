@@ -303,9 +303,6 @@ ____
 * Barplot comparing each model with each other
 	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
 	
-* Precision comparison
-	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
-
 
 
 ____
