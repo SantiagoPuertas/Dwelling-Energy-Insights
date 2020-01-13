@@ -1,16 +1,14 @@
 # Portfolio Santiago Puertas Puchol
 # Dwelling Energy Insights
 
-**Introduction**
-
-
-
 **DataCamp course**
 1. DataCamp Course completion. 
-	* I have completed a total of 7 datacamp courses that have helped me to better understand data preprocessing, dataframe 	processing and data visualization
+	* I have completed a total of 7 datacamp courses and 31 chapters that have helped me to better understand data preprocessing, dataframe 	processing and data visualization
 	![Image of datacamp1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp1.png)
 	![Image of datacamp2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp2.png)
 	![Image of datacamp3](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp3.png)
+	![Image of datacamp4](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp4.png)
+	
 
 **Reflection and evaluation**
 1. Reflection on own contribution to the project.
@@ -190,8 +188,6 @@ Self-organizing maps have been a good classification tool for this project, but 
 The model selected for this project has finally been LSTM. It is the model with which we have achieved better results.
 
 
-
-
 The output of the neural network is 3 or 4 nodes for the following reason. We have converted each possible class into an array of 3 elements ([1,0,0], [0,1,0], [0,0,1]) or 4 elemens ([1,0,0,0], [0,1,0,0], [0,0,1,0], [0,0,0,1])
 
 By this way each final node has to be activated or not, depending on the category to be found. This has been done in this way because we found better results in this way than simply adding a final node that has to differentiate between the 3 or 4 possible classes.
@@ -209,12 +205,8 @@ The model has been trained with an input array of 92 elements per iteration. Thi
 	- day: Dummy varibale of the day of the month (1-31)
 	- hour: Dummy varibale of the hour of the day (0-23)
 
-The training has been carried out with 60 epochs and a learning rate of 0.003.
 
 
-
-
-	
 Recurrent neural networks and specifically LSTM have been the best option, since these neural networks are designed to be trained with a large amount of data based on time series, which is perfect for the purpose of our project.
 	
 
@@ -248,12 +240,8 @@ For the other two predictions I have made small modifications to the base archit
 
 	For training I used the cross validation technique to divide the dataset into three parts. Test, Validation and Training.
 	
-	I have printed the loss and accuracy graphs to be able to detect if I was performing overfitting or underfitting:
+	I have printed the loss and accuracy graphs to be able to detect if I was performing overfitting or underfitting.
 	
-	
-	
-	
-
 	* The best configuration predicting **heating system** has been:
 	
 		- epochs = 60
@@ -291,9 +279,13 @@ The output of the network provides us with a prediction of each class with a per
 5. Visualizing the outcome of a model (explanatory)
 	
 
+Confusion matrix in which we can see with better quality the output values of the neural network:
  ![Image of ConfusionMatrix](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/ConfusionMatrix.png)
 
- 
+
+An example of the output of the neural network with predictions and real outputs:
+ ![Image of PredictionsLSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/PredictionsLSTM.png)
+
 
 
 
@@ -311,7 +303,7 @@ ____
 * Barplot comparing each model with each other
 	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
 	
-	* Precision comparison
+* Precision comparison
 	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
 
 
@@ -356,10 +348,13 @@ Bibliography:
 	* _HS= **H**eating **S**ystem_
 	* _NP= **N**umber of **P**eople_
 	* _SP= number of **S**olar **P**anel_
-	* Logistic Regression (LG), Support Vector Machine (SVM) and K-Nearest Neighbour (K-NN)
+	* LG = Logistic Regression
+	* SVM = Support Vector Machine
+	* K-NN = K-Nearest Neighbour
 	* E = Electricity
 	* ZON = Thermal solar panels
 	* WP = Heat Pump
+	* Cross validation technique = Statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance.
 
 
 ____
@@ -424,29 +419,27 @@ We decided to make this file to make an equitable distribution of the presentati
 
 The **closed presentations** consist of a summary of the progress made in the last week sprint. We have two closed presentations for each sprint, these presentations are more technical than others,so we are being able to explain precisely the methods we have been using, we can explain more information about neural networks, preprocessing or data normalization.  
 
-**Open presentations** have a similar point of view, but they have the particularity that they should not be made so technically. This is because these presentations are focussed to show the progress avhieve so far of the project to the entire university community, so anyone who is interested can came to them. On the other hand, we have the presentations of specific models such as TSNE by our group, Markov models by Saab group or genetic algorithms by Danone group. This last type of presentations helps us to have a broader view of the work that our colleagues do and thus be able to help each other as well. 
+**Open presentations** have a similar point of view, but they have the particularity that they should not be made so technically. This is because these presentations are focussed to show the progress avhieve so far of the project to the entire university community, so anyone who is interested can came to them. On the other hand, we have the presentations of specific models such as TSNE by our group, Markov models by Saab group or genetic algorithms by Danone group.
 
 We have also made **presentations in external locations**; they have been in Groene mient and TU Delft. The presentation of Groene mient has been carried out to present the progress of the project to the community of neighbours where the data we are using in our project have been collected. In this presentation the neighbours taught us the distribution of the houses as well as the solar panels position to have more knowledge about the data we are using and thus use them with a better perspective. 
 
 The presentation of TU Delf has not been as technical as one would expect, because there were attendees of all levels, this is why some questions from the attendees were intended to better understand the scope of the project and others more focused on how the algorithms that we are using works. 
 
-Finally, every week we have had an average of **2 meetings per week with the product owner** (Monday and Friday) to keep a close eye on the project. This has allowed us to move along the recommended line by him and thus be able to move faster in the development of algorithms and not get lost in other methods that are not useful for the project. 
+Finally, every week we have had an average of **2 meetings per week with the product owner** (Monday and Friday) to keep a close eye on the project.
 
 For the correct management of individual or group tasks we have used the Trello as a scrum website tool, which has allowed us to have an accurate record of the tasks to be performed in each sprint. 
 
 
 1. Presentations 
 
-	* Closed: Weekly presentations in which only the students of the minor and teachers participate to show the progress made in that week. They have a more technical format than other presentations.
-	* Open: Weekly presentations in which anyone who is interested in going can participate, to show them progress made in that week. They have a less technical format and are based more on trying to show people who do not know so much about the field that they know and understand as much as possible.
-	* TSNE: Presentation made to explain TSNE. Each group has the possibility of presenting an algorithm or technique that they have used in their project to show it to classmates.
-	* Groene mient: Presentation made in the neighborhood where the information of the Smart meters has been extracted. The objective of this presentation is to show the neighbors the progress we were taking so far and what kind of information, as well as patterns we have taken out after performing the data processing.
-	* TU Delft: Presentation made at the University of TU Delft to show the project as well as its progress.
+	* I have made 4 closed presentations and 1 in an external location (Groene mient)
 	
 
 
 2. Writing paper
 
+	* I have done the recurrent networks part (RNN and LSTM) of the reseach paper
+	* The conclusion of the research paper I have also done in collaboration with my teammate Emilio Caba Batuecas.
 
 
 
