@@ -175,7 +175,7 @@ I have made models based on the consumption and production data set, using a dat
 	
 	![Image of kohonen3d](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/kohonen3d.png)
 	
-		-the higher the bar the more activations have been had in that neuron (same pattern)
+		-the higher the bar is, more activations have been occur in that neuron (same pattern)
 
 
 Self-organizing maps have been a good classification tool for this project, but I have not been able to obtain more information about these classifications. That is why I decided to make class predictions based on the historical consumption and delivery data.
@@ -189,24 +189,6 @@ Self-organizing maps have been a good classification tool for this project, but 
 
 The model selected for this project has finally been LSTM. It is the model with which we have achieved better results.
 
-The general architecture we have used has been:
-
-![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
-
-	- Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
-	
-	- Simple 20-node MLP layer with RELU activation
-	
-	- Dropout of 0.25
-	
-	- Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
-
-For the other two previews I have made small modifications to the base architecture to improve the final result
-
-
-![Image of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
-
-![Image of SolarPanels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
 
 
 
@@ -238,19 +220,82 @@ Recurrent neural networks and specifically LSTM have been the best option, since
 
 
 2. Configuring a Model
-	* The model that has finally given the best predictions has been the LSTM, with an architecture of an input recurrent layer of 30 neurons, a dropout and a final perceptron simple layer with 3 neurons (the number of outputs neurons depends on each prediction)
+	
+The general architecture I have used has been:
+
+![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
+
+	- Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
+	
+	- Simple 20-node MLP layer with RELU activation
+	
+	- Dropout of 0.25
+	
+	- Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
+	
+I add a layer of simple perceptron (dense) at the output of the recurrent layer to improve the output and that it is able to learn the patterns of recurrent network output. Then a dropout to reinforce learning. Finally, the layer of three simple nodes (simple mlp) is intended to give a value to each class to predict (this layer will have the same number of nodes as classes)
+
+
+For the other two predictions I have made small modifications to the base architecture to improve the final result.
+
+
+![Image of People](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/People.png)
+
+![Image of SolarPanels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
+
 
 3. Training a model
-	* The best results have been achieved with a learning rate of 0.003 and between 50 and 60 epochs
+
+	For training I used the cross validation technique to divide the dataset into three parts. Test, Validation and Training.
+	
+	I have printed the loss and accuracy graphs to be able to detect if I was performing overfitting or underfitting:
+	
+	
+	
+	
+
+	* The best configuration predicting **heating system** has been:
+	
+		- epochs = 60
+		- validation_split = 0.2
+		- learning rate = 0.003
+		- loss = 'mean_squared_error'
+		
+	* The best configuration predicting **number of solar panels** has been:
+	
+		- epochs = 50
+		- validation_split = 0.2
+		- learning rate = 0.01
+		- loss = 'categorical_crossentropy'
+		
+	* The best configuration predicting **number of people** has been:
+		
+		- epochs = 100
+		- validation_split = 0.2
+		- learning rate = 0.01
+		- loss = 'binary_crossentropy'
+	
 
 4. Evaluating a model
 
+
+![Image of AccLoss](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/AccLoss.png)
+
+To evaluate the model I have used the .evaluate() function of keras, which has allowed me to evaluate the training with the test dataset. It has returned a result of 81%.This percentage is not what we had previously said of 96% and that is because the values of the network output have not yet been processed.
+
+![Image of OutputLSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/OutputLSTM.png)
+
+The output of the network provides us with a prediction of each class with a percentage (0-1), which is why every time it reduces the probability of two classes and increases what it thinks it is. In order to compare the test data with those of the network output I have rounded the highest value of each output array to 1. In this way the classes are binarized and thus the accuracy of the model is increased to 96%
+
+
 5. Visualizing the outcome of a model (explanatory)
-	* Barplot comparing each model with each other
-	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
 	
-	* Precision comparison
-	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
+
+ ![Image of ConfusionMatrix](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/ConfusionMatrix.png)
+
+ 
+
+
 
 ____
 
@@ -262,6 +307,12 @@ ____
 
 
 ![Image of ResultsTable](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/TotalResults.png)
+
+* Barplot comparing each model with each other
+	![Image of results1](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results1.png)
+	
+	* Precision comparison
+	![Image of results2](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/results2.png)
 
 
 
