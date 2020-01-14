@@ -211,7 +211,7 @@ The general architecture I have used has been:
 	
 	- Dropout of 0.25
 	
-	- Simple 3-node MLP layer with SOFTMAX activation (The number of outputs depends on the number of categories we want to find)
+	- Simple 3-node MLP layer with SOFTMAX activation
 	
 I add a layer of simple perceptron (dense) at the output of the recurrent layer to improve the output and that it is able to learn the patterns of recurrent network output. Then a dropout to reinforce learning. Finally, the layer of three simple nodes (simple mlp) is intended to give a value to each class to predict (this layer will have the same number of nodes as classes)
 
