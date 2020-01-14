@@ -436,7 +436,9 @@ For the correct management of individual or group tasks we have used the Trello 
 2. Writing paper
 
 	* I have done the recurrent networks part (RNN and LSTM) of the reseach paper
-	* The conclusion of the research paper I have also done in collaboration with my teammate Emilio Caba Batuecas.
+	* The conclusion of the research paper I have also done in collaboration with my teammate [Emilio Caba Batuecas](https://github.com/ecabab).
+	
+	
 
 
 
