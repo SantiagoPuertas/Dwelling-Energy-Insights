@@ -205,7 +205,7 @@ The general architecture I have used has been:
 
 ![Image of HeatingSystem](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/HeatingSystem.png)
 
-	- Recurrent layer of 40 nodes with a dropout of 0.2 (20% of the connections are randomly removed so that the network is able to learn a pattern in different ways)
+	- Recurrent layer of 40 nodes with a dropout of 0.2
 	
 	- Simple 20-node MLP layer with RELU activation
 	
@@ -358,6 +358,7 @@ Bibliography:
 	* ZON = Thermal solar panels
 	* WP = Heat Pump
 	* Cross validation technique = Statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance.
+	* Dropout = Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
 
 
 ____
