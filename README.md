@@ -224,27 +224,7 @@ For the other two predictions I have made small modifications to the base archit
 ![Image of SolarPanels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/SolarPanels.png)
 
 
-3. Training a model
 
-The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
-
-	- delivery: delivery energy to the net in Kw/h
-	- consumption: energy usage from the net in Kw/h
-	- T: Temperature (in 0.1 degrees Celsius) at 1.50 m height during the observation;
-	- SQ: Duration of sunshine (in 0.1 hours) per hour, calculated from global radiation (-1 for <0.05 hours);
-	- Q: Global radiation (in J / cm2) per hour section;
-	- week: Dummy varibale of the week of the year (1-52)
-	- month: Dummy varibale of the month of the year (1-12)
-	- season: Dummy varibale of the season of the year (1-4)
-	- day: Dummy varibale of the day of the month (1-31)
-	- hour: Dummy varibale of the hour of the day (0-23)
-
-
-
-For training I used the cross validation technique to divide the dataset into three parts. Test, Validation and Training.
-	
-I have printed the loss and accuracy graphs to be able to detect if I was performing overfitting or underfitting.
-	
 * The best configuration predicting **heating system** has been:
 	
 		- epochs = 60
@@ -266,6 +246,29 @@ I have printed the loss and accuracy graphs to be able to detect if I was perfor
 		- learning rate = 0.01
 		- loss = 'binary_crossentropy'
 	
+
+3. Training a model
+
+The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
+
+	- delivery: delivery energy to the net in Kw/h
+	- consumption: energy usage from the net in Kw/h
+	- T: Temperature (in 0.1 degrees Celsius) at 1.50 m height during the observation;
+	- SQ: Duration of sunshine (in 0.1 hours) per hour, calculated from global radiation (-1 for <0.05 hours);
+	- Q: Global radiation (in J / cm2) per hour section;
+	- week: Dummy varibale of the week of the year (1-52)
+	- month: Dummy varibale of the month of the year (1-12)
+	- season: Dummy varibale of the season of the year (1-4)
+	- day: Dummy varibale of the day of the month (1-31)
+	- hour: Dummy varibale of the hour of the day (0-23)
+
+
+
+For training I used the cross validation technique to divide the dataset into three parts. Test, Validation and Training.
+	
+I have printed the loss and accuracy graphs to be able to detect if I was performing overfitting or underfitting.
+	
+
 
 4. Evaluating a model
 
