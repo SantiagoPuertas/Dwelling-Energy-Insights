@@ -13,9 +13,18 @@
 **Reflection and evaluation**
 1. Reflection on own contribution to the project.
 
+
+
+**What was the situation?**
+
+The Project began by doing searches on similar topics, thanks to these searches we were able to know better the field of self-sufficient houses vigorously (zero energy balance) as well as the operation of the Smart meters used to measure energy consumption and delivery. Later when we received the dataset we started cleaning it and trying to find some classification and / or prediction algorithm that would fit our project
+
+**What was your task?**
+	* I have performed the following tasks:
+
 * [TSNE](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/TSNE%20Kmeans%20K-Nearest.ipynb) 
 
-	* I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
+* I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
 
 
 
@@ -63,9 +72,44 @@
 
 
 
+**What actions did you take, what did you do?**
+
+As the results I was getting did not fully answer the research question, I began to investigate possible algorithms and neural networks that did not lose the timeset of the dataset when searching and finding patterns. It is in this search I found the RNN, with which I started to develop them, as well as fully understand their operation.
+
+
+
+**What was the result, what happened?** 
+
+The RNN did not reach a good accuracy, so searching online, I found the solution: LSTM. These types of neural networks work in a similar way to NNR but with much more memory, for our project in which we managed three-year time series divided into data every 15 minutes was perfect. After testing the LSTM the results were so good that the project focused on this type of neural networks and thus be able to solve the research question correctly
+
+
+**What did you learn (reflection)?**
+
+I have mainly learned how recurrent neural networks works, their configuration and their uses. The most important thing has been to perform a correct research for information on the possible machine learning algorithms. Many times we achieved an achievement and we thought that we have reached the best of the results, but re-studying the solution and continuing to study I realized that the RNNs were good, but they could still be improved much more with the LSTM
+
+
 2. Reflection on own learning objectives.
 
-	I have greatly improved my knowledge of machine learning algorithms, as well as Deep learning. I already had a knowledge base about machine learning, but recurrent neural networks have been a challenge for me. The way to train them, as well as to feed them (3D data shape) has been quite complicated, but I have learned how they work and how this type of neural networks behaves. As well as improve my knowledge about self-organizing maps (Kohonen Map) and take a lot of ease with handling large amounts of data, for cleaning and processing.
+**What was the situation?**
+I am a student of 4th degree in software engineering and my goal is that by the end of the minor have a much greater and broader knowledge of data science projects and research papers. In the future I would like to work in this sector and I think it is a very good opportunity to take advantage of everything in my hand to use it to learn, as well as to put into practice everything previously learned.
+
+**What was your task?**
+My task to fulfill my learning objectives has been to take all the Python data science courses of the datacamp. Once I had completed them, I started searching for new algorithms that I could use in the project, and that's how I found the LSTM. Once I had been informed enough I put them into practice while doing the exercises of the university server in order to improve the basis of them.
+
+
+**What actions did you take, what did you do?**
+Every day I have dedicated an average of 2 hours a day to keep myself informed and to know well the algorithms that I have been using in the project, as well as daily work at home of the project and literary and scientific searches on the project field.
+
+
+**What was the result, what happened?**
+As a result I have obtained a fairly broad knowledge of the field of data science and how to conduct research that has allowed me to successfully pass the minor's exam and have been able to contribute my knowledge to the team.
+
+**What did you learn (reflection)?**
+I had never done a portfolio or a research paper, which led me to a completely unknown field. I have learned to write according to the standards and rigor of the research papers required.
+
+
+
+I have greatly improved my knowledge of machine learning algorithms, as well as Deep learning. I already had a knowledge base about machine learning, but recurrent neural networks have been a challenge for me. The way to train them, as well as to feed them (3D data shape) has been quite complicated, but I have learned how they work and how this type of neural networks behaves. As well as improve my knowledge about self-organizing maps (Kohonen Map) and take a lot of ease with handling large amounts of data, for cleaning and processing.
 	
 	
 
@@ -73,9 +117,21 @@
 
 3. Evaluation on the group project as a whole.
 	
-	On the other hand, having worked with the Scrum methodology we have been able to follow the project day by day. The daily standup has been a task that we have done methodologically every day. At the beginning it could have been a useless task, but over time and as we have been closing sprints with the objectives met, it has become a main task for the correct development of the project.
 	
-	Having worked on a real project with meetings with a product owner has given us a much more real vision of it. It has not been a mere job for the university. We had deadlines to meet, as well as expectations of the neighbors of the neighborhood where the information (Smart meters) and the product owner have been collected.
+	
+**What was the situation?**
+
+**What was your task?**
+
+**What actions did you take, what did you do?**
+
+**What was the result, what happened?**
+
+**What did you learn (reflection)?**
+
+On the other hand, having worked with the Scrum methodology we have been able to follow the project day by day. The daily standup has been a task that we have done methodologically every day. At the beginning it could have been a useless task, but over time and as we have been closing sprints with the objectives met, it has become a main task for the correct development of the project.
+	
+Having worked on a real project with meetings with a product owner has given us a much more real vision of it. It has not been a mere job for the university. We had deadlines to meet, as well as expectations of the neighbors of the neighborhood where the information (Smart meters) and the product owner have been collected.
 
 
 
