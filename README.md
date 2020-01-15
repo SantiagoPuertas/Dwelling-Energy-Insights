@@ -3,16 +3,40 @@
 ____
 
 # Table of Contents
-1. [First Example](#research-project)
-2. [Second Example](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+1. [Research project](#research-project)
+	- 1.1 [Task definition](#task-definition)
+	- 1.2 [Evaluation](#evaluation)
+	- 1.3 [Conclusions](#conclusions)
+	- 1.4 [Planning](#planning)
+	
+	
+2. [Predictive Analytics](#predictive-analytics)
+	- 2.1 [Selecting a Model](#selecting-a-model)
+	- 2.2 [Configuring a Model](#configuring-a-model)
+	- 2.3 [Training a model](#training-a-model)
+	- 2.3 [Evaluating a model](#evaluating-a-model)
+	- 2.3 [Visualizing the outcome of a model](#visualizing-the-outcome-of-a-model)
+	
+	
+3. [Domain knowledge](#domain-knowledge)
+	- 3.1 [Introduction of the subject field](#introduction-of-the-subject-field)
+	- 3.2 [Literature research](#literature-research)
+	- 3.3 [Explanation of Terminology, jargon and definitions](#explanation-of-terminology-jargon-and-definitions)
 
 
+4. [Data preprocessing](#data-preprocessing)
+	- 4.1 [Data exploration](#data-exploration)
+	- 4.2 [Data cleansing](#data-cleansing)
+	- 4.3 [Data preparation](#data-preparation)
+	- 4.4 [Data explanation](#data-explanation)
+	- 4.5 [Data visualization](#data-visualization)
+	
 
-## example2
-## Third Example
-## [Fourth Example](http://www.fourthexample.com) 
+5. [Communication](#communication)
+	- 5.1 [Presentations](#presentations)
+	- 5.2 [Writing paper](#writing-paper)
+
+
 ____
 
 **DataCamp course**
@@ -178,9 +202,10 @@ Having worked on a real project with meetings with a product owner has given us 
 ____
 
 ## Research project
-1. Task definition
-	* Research question: Can we go insight the energy consumption in Netherlands?
-	
+
+## Task definition
+
+* Research question: Can we go insight the energy consumption in Netherlands?
 	* The research project was set up by Salcedo Rahola who introduced the project to The Hague University. The Hague University introduced the project to the students that enrolled into the minor program of September 2019 to January 2020. The six of us decided to join this project as a choice between 7 projects in total.  
 
 Salcedo Rahola set up the project because he wanted to gain insight from the data that he is working with. The goal of the project is to set up policies for dwellings based on the characteristics of the dwelling using only data from smart meters. To reach this goal we have analysed the data from the smart meters and trained machine learning and deep learning algorithms for clustering the data using Python. 
@@ -193,13 +218,13 @@ We define the characteristics of a dwelling as type of heating system, number of
 
 The data of the smart meters consists of the delivery, all the power that is not used going back to the net, and the consumption, all the power needed from the net, summed up every 15 minutes. The data is of a timespan from July 2017 till June 2019.
 
-2. Evaluation
+## Evaluation
 
-	* The results obtained by the recurrent neural networks give us the guarantee that it is possible to determine what type of heating installation a house has installed, how many people live in that house or how many solar panels have installed. In the near future, when smartmeters are mandatory in all Netherlands, the models presented here can be trained with a greater variety of data and thus improve predictions
+* The results obtained by the recurrent neural networks give us the guarantee that it is possible to determine what type of heating installation a house has installed, how many people live in that house or how many solar panels have installed. In the near future, when smartmeters are mandatory in all Netherlands, the models presented here can be trained with a greater variety of data and thus improve predictions
 
-3. Conclusions
+## Conclusions
 
-	* My group has worked on other algorithms in parallel (Logistic Regression, Support Vector Machine, and K-Nearest Neighbour) while I developed the LSTM model. This model has finally become the best model to solve our research question.
+* My group has worked on other algorithms in parallel (Logistic Regression, Support Vector Machine, and K-Nearest Neighbour) while I developed the LSTM model. This model has finally become the best model to solve our research question.
 	
 
 	* By using Logistic Regression (LG), Support Vector Machine (SVM) and K-Nearest Neighbour (K-NN) algorithms we managed to get around a 65% accuracy on predictions. So, when presenting (a part of) the dataset, the algorithms can tell us about 65% for sure which heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling. This means is it only partly possible to gain energy insights of the characteristics of the dwellings and the people using the data from smart meters. 
@@ -212,9 +237,9 @@ The data of the smart meters consists of the delivery, all the power that is not
 	* The answer is yes, we can. With the RNN algorithm (LSTM) we can find the answer to the characteristics of the dwelling like what kind of heating system is used, the amount of people living in the dwelling and the number of solar panels used by that dwelling.
 	
 
-4. Planning
+## Planning
 
-	* The project has been carried out using the SCRUM work methodology
+* The project has been carried out using the SCRUM work methodology
 	* Trello is the web tool we have used to update all the progress as well as its planning
 	* During the project we used an agile approach using Scrum. For doing so we created an environment in Trello online. Every sprint had a duration of two weeks. Every day we had a daily stand-up to discuss what is done and what will be worked on that day. At the end of every sprint a new backlog is defined and added to the list ‘To Refine’. The beginning of the next sprint a meeting decides what will be worked on during the sprint and moved to the list ‘To Do’. The tasks in the To Do list will be assigned to certain persons in the team. When working on it the task will be moved to the list ‘In Progress’ and when done to the list ‘Done’.
 	
@@ -226,7 +251,7 @@ The data of the smart meters consists of the delivery, all the power that is not
 
 ____
 
-**Predictive Analytics**
+## Predictive Analytics
 
 My teammates have made other algorithms in which very good accuracys have not been achieved, so the lstm model has finally been chosen.
 
@@ -254,7 +279,7 @@ After the data cleaning process, I used different Machine Learning algorithms to
 
 I have made models based on the consumption and production data set, using a data point every 15 minutes (one row of data). The results were not too good, so I used different dummy variables, such as day of the week, week, season and time. The KNMI data set has also been implemented in the data set, such as temperature, global radiation and sunshine hours. The results have improved considerably, and the one that has improved the most has been the LSTM model, because the higher the number of features, the better predictions it made.
 
-1. Selecting a Model
+## Selecting a Model
 
 
 - ### [Kohonen](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Kohonen/Kohonen.ipynb)
@@ -296,7 +321,7 @@ Recurrent neural networks and specifically LSTM have been the best option, since
 	
 
 
-2. Configuring a Model
+## Configuring a Model
 	
 The general architecture I have used has been:
 
@@ -344,7 +369,7 @@ For the other two predictions I have made small modifications to the base archit
 		- loss = 'binary_crossentropy'
 	
 
-3. Training a model
+## Training a model
 
 The model has been trained with an input array of 92 elements per iteration. This has allowed us to train the network by separate days. The input has 10 variables, 2 of them from the dataset (consumption and delivery) and the other 8 variables added later to achieve better results. The 8 new variables that we have added, 3 of them are from the KNMI meteorological institute (T: temperature, SQ: radiation per square meter , Q: radiation ). The other 5 are dummy variables created by us in order to add more information to the dataset.
 
@@ -371,7 +396,7 @@ I have printed the loss and accuracy graphs to be able to detect if I was perfor
 	
 
 
-4. Evaluating a model
+## Evaluating a model
 
 
 ![Image of AccLoss](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/AccLoss.png)
@@ -383,7 +408,7 @@ To evaluate the model I have used the .evaluate() function of keras, which has a
 The output of the network provides us with a prediction of each class with a percentage (0-1), which is why every time it reduces the probability of two classes and increases what it thinks it is. In order to compare the test data with those of the network output I have rounded the highest value of each output array to 1. In this way the classes are binarized and thus the accuracy of the model is increased to 96%
 
 
-5. Visualizing the outcome of a model (explanatory)
+## Visualizing the outcome of a model
 	
 
 Confusion matrix in which we can see with better quality the output values of the neural network:
@@ -414,20 +439,22 @@ ____
 
 ____
 
-**Domain knowledge**
+## Domain knowledge
 
-1. Introduction of the subject field
-	* In the last few years, the European Commission has set various ambitious targets in order to reduce CO2 emissions. As a result of this, the Dutch government has been regulating the energy sector to move towards the use of green energy in order to avoid the use of natural gasses by the end of 2050. By avoiding the use of natural gasses, CO2 emissions can be ceased, and earthquakes can be disposed. Accordingly, the importance of reducing the use of natural gasses in dwellings is growing strongly. Although most energy is used by industry, the build environment is responsible for 28% of the energy usage. Approximately 61% of these buildings still use natural gas for heating. The technologies that currently exist which could help us reduce the use of natural gasses, are most suitable for the build environment rather that the industry. 
+## Introduction of the subject field
+
+* In the last few years, the European Commission has set various ambitious targets in order to reduce CO2 emissions. As a result of this, the Dutch government has been regulating the energy sector to move towards the use of green energy in order to avoid the use of natural gasses by the end of 2050. By avoiding the use of natural gasses, CO2 emissions can be ceased, and earthquakes can be disposed. Accordingly, the importance of reducing the use of natural gasses in dwellings is growing strongly. Although most energy is used by industry, the build environment is responsible for 28% of the energy usage. Approximately 61% of these buildings still use natural gas for heating. The technologies that currently exist which could help us reduce the use of natural gasses, are most suitable for the build environment rather that the industry. 
  
-	The build environment forms the subject field of the project. We are focussing on 33 ecological dwellings in The Netherlands (Groene Mient). In each house there is a smart meter installed, which measures the energy delivery and consumption. By using this data, in combination with publicly available information, it is possible to determine dwelling characteristics and the energy use behaviour of its residents. This information could be used to optimize the current dwellings energy system and to propose possible improvements to it with the goal to reduce CO2 emissions related to energy use. 
+The build environment forms the subject field of the project. We are focussing on 33 ecological dwellings in The Netherlands (Groene Mient). In each house there is a smart meter installed, which measures the energy delivery and consumption. By using this data, in combination with publicly available information, it is possible to determine dwelling characteristics and the energy use behaviour of its residents. This information could be used to optimize the current dwellings energy system and to propose possible improvements to it with the goal to reduce CO2 emissions related to energy use. 
  
-	The objective of this research is to look at what methods can be used in order to obtain as much insight as possible on the dwelling characteristics and the energy use behaviour of its residents by analysing energy use data
+The objective of this research is to look at what methods can be used in order to obtain as much insight as possible on the dwelling characteristics and the energy use behaviour of its residents by analysing energy use data
 
 
-2. Literature research
-	* During the first week of our project, we started with exploring the domain by doing literature research (see 1.4.1). We have looked at previously published papers that were available at well-known platforms such as ScienceDirect and TU Delft.  
+## Literature research
+
+During the first week of our project, we started with exploring the domain by doing literature research (see 1.4.1). We have looked at previously published papers that were available at well-known platforms such as ScienceDirect and TU Delft.  
  
-	We looked at researches that were previously done on subject field, as well as researches that were done on smart meters. We did this to get more insights in previously researched topics that could have helped us to get more understanding about our subject field.   
+We looked at researches that were previously done on subject field, as well as researches that were done on smart meters. We did this to get more insights in previously researched topics that could have helped us to get more understanding about our subject field.   
  
 We have found several papers that were on the topic of energy usage in dwellings, such as: 
 
@@ -448,33 +475,33 @@ Bibliography:
 	- D. Majcen, L.C.M. Itard, H. Visscher, Theoretical vs. actual energy consumption of labelled dwellings in the Netherlands: Discrepancies and policy implications, (2012) 
 	- Pol Van Aubel & Erik Poll, Smart metering in the Netherlands: What, how, and why, (2019) 
 
-3. Explanation of Terminology, jargon and definitions
+## Explanation of Terminology jargon and definitions
 
-	* _HS= **H**eating **S**ystem_
-	* _NP= **N**umber of **P**eople_
-	* _SP= number of **S**olar **P**anel_
-	* LG = Logistic Regression
-	* SVM = Support Vector Machine
-	* K-NN = K-Nearest Neighbour
-	* E = Electricity
-	* ZON = Thermal solar panels
-	* WP = Heat Pump
-	* Cross validation technique = Statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance.
-	* Dropout = Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
-	* One-hot encoded arrays technique = A one hot encoding is a representation of categorical variables as binary vectors. This first requires that the categorical values be mapped to integer values. Then, each integer value is represented as a binary vector that is all zero values except the index of the integer, which is marked with a 1.
+* _HS= **H**eating **S**ystem_
+* _NP= **N**umber of **P**eople_
+* _SP= number of **S**olar **P**anel_
+* LG = Logistic Regression
+* SVM = Support Vector Machine
+* K-NN = K-Nearest Neighbour
+* E = Electricity
+* ZON = Thermal solar panels
+* WP = Heat Pump
+* Cross validation technique = Statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance.
+* Dropout = Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
+* One-hot encoded arrays technique = A one hot encoding is a representation of categorical variables as binary vectors. This first requires that the categorical values be mapped to integer values. Then, each integer value is represented as a binary vector that is all zero values except the index of the integer, which is marked with a 1.
 
 
 ____
 
-**Data preprocessing**
+## Data preprocessing
 
 
-1. Data exploration
+## Data exploration
 
 In order to explore the data, I plotted the energy delivery and energy consumption of one dwelling. From these plots I realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data.
 
 
-2. Data cleaning
+## Data cleansing
 
 The data was cleaned by removing those dwellings which had less data than the others and those rows where there were blank spaces or outliers for any dwelling. The decision to delete the house with very little stored data comes because if we put that house together to train the model, it would train unevenly and would not draw correct patterns
 
@@ -483,7 +510,7 @@ Using the following formula: max_production = **(75 * 230) / 4000** I have been 
 
 Any value above this measure is considered an outlier, taking into account the average contracted power in the neighborhood from which we obtained the data
 
-3. Data preparation
+## Data preparation
 
 Once the data was cleaned it, the weather data was added to the dataset, which comes from the KNMI (Koninklijk Nederlands Meteorologisch Instituut) and some dummy variables as well (month, season...). 
 
@@ -494,7 +521,7 @@ Once the data was in the correct way they have been normalized to be able to hav
 
 
 
-4. Data explanation
+## Data explanation
 
 Original Dataset
 
@@ -508,7 +535,7 @@ Original Dataset
 
 
 
-5. Data visualization (exploratory)
+## Data visualization
 
 Cleaned dataset
 
@@ -524,7 +551,7 @@ Clean normalized data set
 
 ____
 
-**Communication**
+## Communication
 
 Communication has been a large part of our project, greatly influencing its correct development. We have made an Excel file to keep track of all the presentations made and still to be done. Next, I show a screenshot of the content of the file. 
 
@@ -547,21 +574,22 @@ Finally, every week we have had an average of **2 meetings per week with the pro
 For the correct management of individual or group tasks we have used the Trello as a scrum website tool, which has allowed us to have an accurate record of the tasks to be performed in each sprint. 
 
 
-1. Presentations 
+## Presentations 
 
-	* I have made 4 closed presentations and 1 in an external location (Groene mient)
-		* 1st closed: [Dwelling Energy Insights - week 7](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%207.pdf)
-		* Groenne mient: [Groene Mient_Final 2.0](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Groene%20Mient_Final%202.0.pdf)
-		* 2nd closed: [Dwelling Energy Insights - week 9](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%209.pdf)
-		* 3rd closed: [Dwelling Energy Insights - week 11](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2011.pdf)
-		* 4th closed: [Dwelling Energy Insights - week 12](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2012.pdf)
+* I have made 4 closed presentations and 1 in an external location (Groene mient)
+
+	* 1st closed: [Dwelling Energy Insights - week 7](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%207.pdf)
+	* Groenne mient: [Groene Mient_Final 2.0](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Groene%20Mient_Final%202.0.pdf)
+	* 2nd closed: [Dwelling Energy Insights - week 9](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%209.pdf)
+	* 3rd closed: [Dwelling Energy Insights - week 11](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2011.pdf)
+	* 4th closed: [Dwelling Energy Insights - week 12](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2012.pdf)
 	
 
 
-2. Writing paper
+## Writing paper
 
-	* I have done the recurrent networks part (RNN and LSTM) of the reseach paper
-	* The conclusion of the research paper I have also done in collaboration with my teammate [Emilio Caba Batuecas](https://github.com/ecabab).
+* I have done the recurrent networks part (RNN and LSTM) of the reseach paper
+* The conclusion of the research paper I have also done in collaboration with my teammate [Emilio Caba Batuecas](https://github.com/ecabab).
 	
 	
 
