@@ -1,12 +1,7 @@
 # Portfolio Santiago Puertas Puchol
 # Dwelling Energy Insights
 
-
-
-
-
-
-
+____
 
 **DataCamp course**
 1. DataCamp Course completion. 
@@ -16,6 +11,8 @@
 	![Image of datacamp3](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp3.png)
 	![Image of datacamp4](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Images/datacamp4.png)
 	
+
+____
 
 **Reflection and evaluation**
 1. Reflection on own contribution to the project.
@@ -27,11 +24,12 @@
 The Project began by doing searches on similar topics, thanks to these searches we were able to know better the field of self-sufficient houses vigorously (zero energy balance) as well as the operation of the Smart meters used to measure energy consumption and delivery. Later when we received the dataset we started cleaning it and trying to find some classification and / or prediction algorithm that would fit our project
 
 **What was your task?**
-	* I have performed the following tasks:
+
+I have performed the following tasks:
 
 * [TSNE](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/TSNE%20Kmeans%20K-Nearest.ipynb) 
 
-* I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
+	* I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
 
 
 * [Outliers by maximuns](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Cleaning%20data/outliers%20by%20maximuns.ipynb)
@@ -74,7 +72,8 @@ The Project began by doing searches on similar topics, thanks to these searches 
 
 * [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb)
 
-	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently it has been improved and the [final script](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb) has been reached with which we have reached an accuracy of 96%
+	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently I improved it until I reached the [final version](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb) in wich I reached an accuracy of 96%
+	
 
 
 
@@ -93,6 +92,8 @@ The RNN did not reach a good accuracy, so searching online, I found the solution
 
 I have mainly learned how recurrent neural networks works, their configuration and their uses. The most important thing has been to perform a correct research for information on the possible machine learning algorithms. Many times we achieved an achievement and we thought that we have reached the best of the results, but re-studying the solution and continuing to study I realized that the RNNs were good, but they could still be improved much more with the LSTM
 
+
+____
 
 2. Reflection on own learning objectives.
 
@@ -120,6 +121,7 @@ I have greatly improved my knowledge of machine learning algorithms, as well as 
 	
 
 
+____
 
 3. Evaluation on the group project as a whole.
 	
@@ -162,6 +164,7 @@ Having worked on a real project with meetings with a product owner has given us 
 
 
 ____
+
 **Research project**
 1. Task definition
 	* Research question: Can we go insight the energy consumption in Netherlands?
@@ -210,6 +213,7 @@ The data of the smart meters consists of the delivery, all the power that is not
 	
 
 ____
+
 **Predictive Analytics**
 
 My teammates have made other algorithms in which very good accuracys have not been achieved, so the lstm model has finally been chosen.
@@ -267,14 +271,13 @@ Self-organizing maps have been a good classification tool for this project, but 
   	- [Predicting Number of Solar Panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Solar%20panelsV2.ipynb): 80.5% accuracy predicting the number of solar panels installed in a house
 
 
-The model selected for this project has finally been LSTM. It is the model with which we have achieved better results.
+The model selected for this project has finally been LSTM. It is the model with which we have achieved better results and in which I have invested a large part of my effort
 
 
-The output of the neural network is 3 or 4 nodes for the following reason. We have converted each possible class into an array of 3 elements ([1,0,0], [0,1,0], [0,0,1]) or 4 elemens ([1,0,0,0], [0,1,0,0], [0,0,1,0], [0,0,0,1])
+
+The output of the neural network is 3 or 4 nodes for the following reason. We have converted each possible class into an array of 3 elements ([1,0,0], [0,1,0], [0,0,1]) or 4 elemens ([1,0,0,0], [0,1,0,0], [0,0,1,0], [0,0,0,1]) using the one-hot encoded arrays technique.
 
 By this way each final node has to be activated or not, depending on the category to be found. This has been done in this way because we found better results in this way than simply adding a final node that has to differentiate between the 3 or 4 possible classes.
-
-
 
 
 Recurrent neural networks and specifically LSTM have been the best option, since these neural networks are designed to be trained with a large amount of data based on time series, which is perfect for the purpose of our project.
@@ -345,6 +348,10 @@ The model has been trained with an input array of 92 elements per iteration. Thi
 	- hour: Dummy varibale of the hour of the day (0-23)
 
 
+To train the LSTM model I have magnified the dataset. I have made this decision by not having the same number of groups of houses with the same characteristics. That is why when training the network, there were certain predictions that worked much better than others and this was because having fewer data to infer and draw patterns from, the predictions were of worse quality.
+
+I have magnified the dataset by adding some houses duplicating their information, but reversing the order, that is, instead of starting the dataset in 2017, it started in 2019 and went backwards. Thanks to this I have been able to generate new patterns with which to train the network and thus improve the accuracy of the model.
+
 
 For training I used the cross validation technique to divide the dataset into three parts. Test, Validation and Training.
 	
@@ -394,6 +401,7 @@ ____
 
 
 ____
+
 **Domain knowledge**
 
 1. Introduction of the subject field
@@ -441,27 +449,37 @@ Bibliography:
 	* WP = Heat Pump
 	* Cross validation technique = Statistical technique which involves partitioning the data into subsets, training the data on a subset and use the other subset to evaluate the model’s performance.
 	* Dropout = Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
+	* One-hot encoded arrays technique = A one hot encoding is a representation of categorical variables as binary vectors. This first requires that the categorical values be mapped to integer values. Then, each integer value is represented as a binary vector that is all zero values except the index of the integer, which is marked with a 1.
 
 
 ____
+
 **Data preprocessing**
 
 
 1. Data exploration
 
-In order to explore the data, we plotted the energy delivery and energy consumption of one dwelling. From these plots we realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data.
+In order to explore the data, I plotted the energy delivery and energy consumption of one dwelling. From these plots I realized that the smart meters sometimes malfunctioned and did not save the data correctly, instead, what it did was to sum up all the values since it stopped working until it started again. Apart from that, there were also some dwellings where the smart meter was installed later and, therefore, there were a lot of missing data.
+
 
 2. Data cleaning
 
-The data was cleaned by removing those dwellings which had less data than the others and those rows where there were blank spaces or outliers for any dwelling. 
+The data was cleaned by removing those dwellings which had less data than the others and those rows where there were blank spaces or outliers for any dwelling. The decision to delete the house with very little stored data comes because if we put that house together to train the model, it would train unevenly and would not draw correct patterns
+
+Using the following formula: max_production = **(75 * 230) / 4000** I have been able to find outliers. 
+75 amps * 230 volts divided by 4 (because each row of data is every 15 minutes) and multiplied by 1000 to convert it to KW.
+
+Any value above this measure is considered an outlier, taking into account the average contracted power in the neighborhood from which we obtained the data
 
 3. Data preparation
 
-Once we cleaned it, we added the weather data to the dataset, which comes from the KNMI (Koninklijk Nederlands Meteorologisch Instituut) and some dummy variables as well (month, season...). Eventually we placed all the houses one below each other to feed the models. 
+Once the data was cleaned it, the weather data was added to the dataset, which comes from the KNMI (Koninklijk Nederlands Meteorologisch Instituut) and some dummy variables as well (month, season...). 
 
 Finally, the data has been placed in a certain way to feed our models. We have put all the data vertically, one below the other, that is, the columns of each house have all been placed in the same column in the same order that they had horizontally in the original dataset. This has allowed us to have all the dataset information in a 2-dimensional array (821100 x 10)
 
-Once we have the data in the correct way they have normalized to be able to have them all on the same scale and better train the network
+Once the data was in the correct way they have been normalized to be able to have them all on the same scale and better train the network. But this has been done individually in each script, so each one could work with the dataset clean and ready to work, but not standardized. This has been so because if you add another column or feature to your already normalized data, they are on another scale.
+
+
 
 
 4. Data explanation
@@ -493,6 +511,7 @@ Clean normalized data set
 
 
 ____
+
 **Communication**
 
 Communication has been a large part of our project, greatly influencing its correct development. We have made an Excel file to keep track of all the presentations made and still to be done. Next, I show a screenshot of the content of the file. 
