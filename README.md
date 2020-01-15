@@ -106,9 +106,9 @@ I have performed the following tasks:
 	* MLP (multi layer perceptron) used in the first versions of the algorithms to try to predict the possible classes of houses (heating system, number of solar pannels, number of people)
 
 
-* [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb)
+* [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb)
 
-	* The first version of LSTM (long short term memory) to predict the type of heating system type that each house has is this. Subsequently I improved it until I reached the [final version](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Heating%20system.ipynb) in wich I reached an accuracy of 96%
+	* The first version of [LSTM](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/RNN_old_version.ipynb) (long short term memory) to predict the type of heating system type that each house has is this. Subsequently I improved it until I reached the final version in wich I reached an accuracy of 96%
 	
 
 
