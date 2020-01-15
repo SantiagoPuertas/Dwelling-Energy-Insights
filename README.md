@@ -1,6 +1,13 @@
 # Portfolio Santiago Puertas Puchol
 # Dwelling Energy Insights
 
+
+
+
+
+
+
+
 **DataCamp course**
 1. DataCamp Course completion. 
 	* I have completed a total of 7 datacamp courses and 31 chapters that have helped me to better understand data preprocessing, dataframe 	processing and data visualization
@@ -25,7 +32,6 @@ The Project began by doing searches on similar topics, thanks to these searches 
 * [TSNE](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Visualizations/TSNE%20Kmeans%20K-Nearest.ipynb) 
 
 * I have created the TSNE script with the purpose of being able to have a clearer view of the data and possible patterns before starting to create machine learning models, as well as neural networks. In the same way, within the script itself I have created a preliminary version to the final of kmeans and k-nearest in order to be able to better adjust the values and have a better approach to this type of technique.
-
 
 
 * [Outliers by maximuns](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Cleaning%20data/outliers%20by%20maximuns.ipynb)
@@ -121,17 +127,37 @@ I have greatly improved my knowledge of machine learning algorithms, as well as 
 	
 **What was the situation?**
 
+The situation is that we are a team formed by 6 members of which 2 are international students and not all of us study the same career. That is why a different team was presented a priori and in which more effort should be put than in other situations when having to use a non-mother language. Also each of the team lived in places quite far from each other, so the daily standup have been very important to always take them on time to carry an order and continuous monitoring of the project.
+
+Having used Trello as a tool to apply the Scrum work methodology has been a wise idea, the tasks have been distributed equally and thus there has always been work to be done, visually bringing us the progress of the project.
+
+
 **What was your task?**
+
+For the group work I have contributed with my previous knowledge on neural networks and machine learning, as well as creating the RNN and LSTM, which in my opinion I think have been key to reach an optimal solution for the answer to the research question. 
+I have also made 5 presentations, 4 of them in the university (closed presentations) and 1 of them in Groenne mient, the neighborhood where the data has been extracted.
+
+
 
 **What actions did you take, what did you do?**
 
+As my knowledge of machine learning and neural networks were at some way superior of my colleagues (I studied last year two subjects of artificial intelligence in the career) I have tried to explain in detail the advantages and disadvantages of each model.
+
+The review and training of the LSTM has taken me longer than the other tasks that I have done, because this type of neural network (RNN) had never put it into practice, so applying my previous knowledge and the new ones acquired by doing researches have allowed today to present a functional and reliable model of prediction of dwelling characteristics.
+
+
+
 **What was the result, what happened?**
+
+As a final result, we have very well combined with each other, each one contributing the best of itself to the team. I think that a good synergy has been generated among the participants a good synergy and it has turned out to be a very motivating and practical project for everyone.
+
+
 
 **What did you learn (reflection)?**
 
 On the other hand, having worked with the Scrum methodology we have been able to follow the project day by day. The daily standup has been a task that we have done methodologically every day. At the beginning it could have been a useless task, but over time and as we have been closing sprints with the objectives met, it has become a main task for the correct development of the project.
 	
-Having worked on a real project with meetings with a product owner has given us a much more real vision of it. It has not been a mere job for the university. We had deadlines to meet, as well as expectations of the neighbors of the neighborhood where the information (Smart meters) and the product owner have been collected.
+Having worked on a real project with meetings with a product owner has given us a much more real vision of it. It has not been a simply job for the university. We had deadlines to meet, a research paper to deliver, as well as expectations of the neighbors of the neighborhood where the information (Smart meters) and the product owner have been collected.
 
 
 
@@ -493,6 +519,11 @@ For the correct management of individual or group tasks we have used the Trello 
 1. Presentations 
 
 	* I have made 4 closed presentations and 1 in an external location (Groene mient)
+		* 1st closed: [Dwelling Energy Insights - week 7](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%207.pdf)
+		* Groenne mient: [Groene Mient_Final 2.0](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Groene%20Mient_Final%202.0.pdf)
+		* 2nd closed: [Dwelling Energy Insights - week 9](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%209.pdf)
+		* 3rd closed: [Dwelling Energy Insights - week 11](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2011.pdf)
+		* 4th closed: [Dwelling Energy Insights - week 12](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Presentations/Dwelling%20Energy%20Insights%20-%20week%2012.pdf)
 	
 
 
