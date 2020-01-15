@@ -271,7 +271,7 @@ Self-organizing maps have been a good classification tool for this project, but 
   	- [Predicting Number of Solar Panels](https://github.com/SantiagoPuertas/Dwelling-Energy-Insights/blob/master/Recurrent%20Neural%20Network/LSTM%20-%20Solar%20panelsV2.ipynb): 80.5% accuracy predicting the number of solar panels installed in a house
 
 
-The model selected for this project has finally been LSTM. It is the model with which we have achieved better results and in which I have invested a large part of my effort
+The model selected for this project has finally been LSTM. **It is the model with which the project have achieved better results and in which I have invested a large part of my effort.**
 
 
 
